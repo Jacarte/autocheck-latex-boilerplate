@@ -1,6 +1,6 @@
 # autocheck-latex-boilerplate
 
-[textidot](https://github.com/sylvainhalle/textidote) verifies spelling, grammar, style, and run other sanity checks directly from a LaTeX file. This boilerplate repository executes textidot to the main.text file in a GitHub Action, generating issues with the found warnings.
+[textidot](https://github.com/sylvainhalle/textidote) verifies spelling, grammar, style, and run other sanity checks directly from a LaTeX file. This boilerplate repository executes textidot in the main.tex file in a GitHub Action, generating issues with the found warnings.
 
 
 
