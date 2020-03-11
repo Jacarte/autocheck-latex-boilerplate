@@ -4,7 +4,9 @@ on: [push]
 
 jobs:
   build:
+    # Job name is Greeting
     name: Spell checking
+    # This job runs on Linux
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,7 +17,7 @@ jobs:
       - name: Create pdf
         run: sudo apt-get update && sudo apt-get install chromium-browser -y && chromium-browser  --headless --disable-gpu --print-to-pdf=report.pdf report.html
       - name: Create issue content
-        run: python3 .github/parse_json2md.py report.json main.tex > report.md
+        run: python3 .github/parse_json2md.py report.json main.tex $(git log -n 1 --pretty=%H) > report.md
 
       - name: GIT
         run: git config --global user.email "action@github.com" && git config --global user.name "GitHub Action"
@@ -35,3 +37,4 @@ jobs:
           labels: report, automated issue
           project: CROW-paper
           project-column: SPELL_CHECK
+        if: always()

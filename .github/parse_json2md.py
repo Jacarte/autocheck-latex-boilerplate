@@ -2,7 +2,7 @@
 import json
 import sys
 
-def process(f, tex):
+def process(f, tex, revision):
     issues = json.loads(open(f, 'r').read())
     file = open(tex, 'r').read()
 
@@ -23,8 +23,10 @@ def process(f, tex):
         prev = file[:position]
         n = len(prev.split("\n"))
 
-        print("- [*%s*](https://github.com/Jacarte/autocheck-latex-boilerplate/blob/master/main.tex#L%s) %s\n  %s"%(error,n, message, rule))
+        repo = 'https://github.com/Jacarte/autocheck-latex-boilerplate'
+
+        print(f"- [ ] [*{error}*]({repo}/blob/{revision}/{tex}#L{n}) {message}\n  {rule}")
         pass
 
 if __name__ == "__main__":
-    process(sys.argv[1], sys.argv[2])
+    process(*sys.argv[1:])
