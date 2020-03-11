@@ -36,4 +36,7 @@ This repository contains an [action script](.github/workflows/spell_checking.yml
 
 To manual execute the spell check run the following command after downloading the textifot binary:
 
-```java -jar textidot.jar --check en main.tex```
+```java -jar textidot.jar --dict dico.txt --check en main.tex```
+
+
+- Write words to be ommited in dico.txt, one by line
