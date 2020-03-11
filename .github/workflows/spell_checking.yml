@@ -15,7 +15,7 @@ jobs:
       - name: Run textidot
         run: now=$(date +"%m_%d_%Y") && mkdir -p spell && java -jar textidote.jar --check en --dict dico.txt --output json main.tex > report.json || true
       - name: Run textidot
-        run: now=$(date +"%m_%d_%Y") && mkdir -p spell && java -jar textidote.jar --check en --dict dico.txt --output json main.tex > report.html || true
+        run: now=$(date +"%m_%d_%Y") && mkdir -p spell && java -jar textidote.jar --check en --dict dico.txt --output html main.tex > report.html || true
       - name: Create pdf
         run: sudo apt-get update && sudo apt-get install chromium-browser -y && chromium-browser  --headless --disable-gpu --print-to-pdf=report.pdf report.html
       - name: Create issue content
