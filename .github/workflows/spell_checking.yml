@@ -24,7 +24,7 @@ jobs:
         run: git rm -rf . && git checkout -b reports && git add report.json report.pdf && git commit -m 'Spell check report' 
         
       - name: GIT
-        run: git push origin-tok reports --force
+        run: git push origin reports --force
 
       - name: Create Issue From File
         uses: peter-evans/create-issue-from-file@v2
