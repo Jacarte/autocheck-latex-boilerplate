@@ -34,7 +34,7 @@ This repository contains an [action script](.github/workflows/spell_checking.yml
 
 ## Spell check with textidot
 
-To manual execute the spell check run the following command after downloading the textifot binary:
+To manual execute the spell check, first download the textidot binary, then run the following command:
 
 ```java -jar textidot.jar --dict dico.txt --check en main.tex```
 
