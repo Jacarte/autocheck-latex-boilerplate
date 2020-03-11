@@ -1,0 +1,1 @@
+# autocheck-latex-boilerplate
