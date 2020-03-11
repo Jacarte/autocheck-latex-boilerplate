@@ -29,7 +29,7 @@
 This repository contains an [action script](.github/workflows/spell_checking.yml) to perform spell check in the latex document. The detected errors are reported in a separated branch (`reports`) in pdf and json formats. Also a new issue is opened after each push with the itextdot report. Each warning listed in the issue is connected with the main.tex line, for [example](https://github.com/Jacarte/autocheck-latex-boilerplate/issues/2).
 
 ## Troubleshooting and TODOS
-- The automated issue publication is hardcoded for now, this means that you need to specify the repo URL in the [python script file](.github/parse_json2md.py).
+- The automated issue publication is hardcoded for now, this means that you need to specify the repo URL in the [python script file](https://github.com/Jacarte/autocheck-latex-boilerplate/blob/f952b4061c21d20b24ae62da93c9e86bf7dc3e8a/.github/parse_json2md.py#L26).
 
 
 ## Spell check with textidot
