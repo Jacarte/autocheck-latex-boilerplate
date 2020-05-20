@@ -3,7 +3,7 @@
 [textidot](https://github.com/sylvainhalle/textidote) verifies spelling, grammar, style, and runs other sanity checks directly from a LaTeX file. This boilerplate repository executes textidot in the main.tex file in a GitHub Action, generating issues with the found warnings.
 
 
-## Automatic report on GitHub
+## Automatic issue reporting on GitHub
 
 
 This repository contains an [action script](.github/workflows/spell_checking.yml) to perform spell check in the latex document. The detected errors are reported in a separated branch (`reports`) in [pdf](https://github.com/Jacarte/autocheck-latex-boilerplate/blob/reports/report.pdf) and [json](https://github.com/Jacarte/autocheck-latex-boilerplate/blob/reports/report.json) formats. Also a new issue is opened after each push with the itextdot report. Each warning listed in the issue is connected with the main.tex line, for [example](https://github.com/Jacarte/autocheck-latex-boilerplate/issues/2).
