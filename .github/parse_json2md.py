@@ -2,7 +2,7 @@
 import json
 import sys
 
-def process(f, tex, revision):
+def process(f, tex, revision, repo):
     issues = json.loads(open(f, 'r').read())
     file = open(tex, 'r').read()
 
@@ -23,7 +23,6 @@ def process(f, tex, revision):
         prev = file[:position]
         n = len(prev.split("\n"))
 
-        repo = 'https://github.com/Jacarte/autocheck-latex-boilerplate'
 
         print(f"- [ ] [*{error}*]({repo}/blob/{revision}/{tex}#L{n}) {message}\n  {rule}")
         pass
